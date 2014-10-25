@@ -7,6 +7,10 @@
 //echo $path_parts['filename'], "\n"; // since PHP 5.2.0
 
 $db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
+
+$results = $db->query('SELECT * FROM onewire');
+while ($row = $results->fetchArray()) {
+	var_dump($row);
  ?>
 <html>
 <head>
@@ -17,10 +21,6 @@ $db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
 </head>
 <body>
 <p>Now index.php file on github</p>
-<?php
-$results = $db->query('SELECT * FROM onewire');
-while ($row = $results->fetchArray()) {
-	var_dump($row);
-?>
+
 </body>
 </html>
