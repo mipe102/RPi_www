@@ -11,7 +11,8 @@ $db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
 $results = $db->query('SELECT * FROM onewire');
 while ($row = $results->fetchArray()) {
 	var_dump($row);
- ?>
+}
+?>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width" />
