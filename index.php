@@ -6,7 +6,7 @@ echo $path_parts['basename'], "\n";
 echo $path_parts['extension'], "\n";
 echo $path_parts['filename'], "\n"; // since PHP 5.2.0
 
-$db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
+//$db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
  ?>
 <html>
 <head>
@@ -18,9 +18,9 @@ $db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
 <body>
 <p>Now index.php file on github</p>
 <?php
-$results = $db->query('SELECT bar FROM foo');
-while ($row = $results->fetchArray()) {
-	var_dump($row);
+//$results = $db->query('SELECT bar FROM foo');
+//while ($row = $results->fetchArray()) {
+//	var_dump($row);
 ?>
 </body>
 </html>
