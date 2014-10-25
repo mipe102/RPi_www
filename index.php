@@ -1,5 +1,5 @@
 <?php 
-$db = mysql_connect("localhost","username","password"); 
+$db = mysql_connect("localhost","pi","raspberry"); 
 if (!$db) {
 die("Database connection failed miserably: " . mysql_error());
 }
