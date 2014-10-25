@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
 $db = mysql_connect("localhost","username","password"); 
 if (!$db) {
@@ -17,7 +16,7 @@ die("Database selection also failed miserably: " . mysql_error());
 <title>Redirect</title>
 </head>
 <body>
-<p>Now index.html file on github</p>
+<p>Now index.php file on github</p>
  <?php
                 $query = "SELECT * FROM `mytable`;";
                 $result = mysqli_query($db, $query);
