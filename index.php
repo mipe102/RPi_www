@@ -1,5 +1,12 @@
-<?php 
-$db = new SQLite3('SensorData.db');
+<?php
+$path_parts = pathinfo('/home/pi/RPi_sensor/SensorData.db');
+
+echo $path_parts['dirname'], "\n";
+echo $path_parts['basename'], "\n";
+echo $path_parts['extension'], "\n";
+echo $path_parts['filename'], "\n"; // since PHP 5.2.0
+
+$db = new SQLite3('/home/pi/RPi_sensor/SensorData.db');
  ?>
 <html>
 <head>
