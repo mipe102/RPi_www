@@ -1,12 +1,5 @@
 <?php 
-$db = mysql_connect("localhost","pi","raspberry"); 
-if (!$db) {
-die("Database connection failed miserably: " . mysql_error());
-}
-$db_select = mysql_select_db("SensorData.db",$db);
-if (!$db_select) {
-die("Database selection also failed miserably: " . mysql_error());
- }
+$db = new SQLite3('SensorData.db');
  ?>
 <html>
 <head>
@@ -17,12 +10,10 @@ die("Database selection also failed miserably: " . mysql_error());
 </head>
 <body>
 <p>Now index.php file on github</p>
- <?php
-                $query = "SELECT * FROM `mytable`;";
-                $result = mysqli_query($db, $query);
-                while($row = mysqli_fetch_assoc($result)) {
-                      // Display your datas on the page
-                }
-          ?>
+<?php
+$results = $db->query('SELECT bar FROM foo');
+while ($row = $results->fetchArray()) {
+	var_dump($row);
+?>
 </body>
 </html>
